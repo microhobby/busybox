@@ -1,0 +1,57 @@
+#!/bin/busybox sh
+
+/bin/busybox --install -s
+
+/bin/busybox ln -s /bin/busybox /bin/clear
+
+mount -t devtmpfs  devtmpfs  /dev
+mount -t proc      proc      /proc
+mount -t sysfs     sysfs     /sys
+mount -t tmpfs     tmpfs     /tmp
+
+echo 0 > /proc/sys/kernel/printk
+clear
+
+echo '
+     `.:::+++/`          .++++:::.     
+    -ds/sh``.NN:        oMy` .m++hh`   
+    dd`.oh/:yMMy        NMNo:+h/`.Mo   
+   .h:/N-   `NM:        sMy    od:+y   
+   +o`-m:../dMMd:`    `+NMMy-..oh..h.  
+    odNMNmmNMMMMMd/`.omMMMMMNmmMMmh:   
+     `-:-.`-sNMMMMMmNMMMMMm+.`.-:.     
+             .omMMMMMMMMd/`            
+              -hMMMMMMMMs.             
+            -yNMMMMMMMMMMmo.           
+    .:/:-.:hNMMMMMh:/dMMMMMNs-.-//:`   
+  `yNMMMNNMMMMMNy-   `/dMMMMMNNNMMMm+  
+  +MMMMMMMMMMMy-       `:mMMMMMMMMMMM. 
+  .dMMMMMMMMMM:          sMMMMMMMMMMs  
+   `:omMMMMMMMy          NMMMMMMMh+.   
+      `hMMMMMm-          +NMMMMMo      
+        -+o+:`            `/oo/.       
+                             :+.             +MM:                     .::-`     
+                            .NMs    /hdmy.    ``         :oyys/     oNMMMMMh-   
+                                ```` `/:` /syy`  .mh:  `dMMhhMMm.  yMMh` /do.   
+                .-:/`    `oy.   MMMo -MM/ sMMMm. oMMN  oMMo  :MMm` dMMm/.       
+   .shmds-     sMMMMh    hMMMo  MMMh `MMy /MMMMN-dMMM. hMM+   dMM+ .hMMMMNy+`   
+  :MMhodMMs    dMymMM/   sMMMMm-NMMN  mMm .MMMMMMMMMM/ yMMo   oMMy   .+ymMMMMo  
+  NMM`  mMM:   MMo/MMN`  /MMMMMMMMMM. hMM. NMMMMMMMMMs +MMd   /MMd   ``  `sMMM- 
+ -MMN   ``    -MM+ hMMh  -MMMMMMMMMM/ oMM+ hMMMNMMMMMd `NMM.  /MMs `hMN+` +MMN` 
+ .MMM`        +MM/`:MMM/  NMMNdMMMMMs /MMy oMMM:+NMMMM  :MMm++mMN.  -hMMMMMMy.  
+  mMM/   :++` yMMMMMMMMN` dMMy +NMMMd .MMN :MMM` `yMMh   .ymNNds.     `-::-     
+  :MMm`  dMM` mMN:--.dMMh +MMo  .hMMN  Nmd``ys+    --           -oyyyo.         
+   +MMmsyMM+ `MMh    -dhy. -+-    .``    ./+/.     .ymMMNh/   .dMMhymMM+        
+    -shdho-  `--` ``      :/+`  .yhs   `hMMNMMd.  .NMN/:hMMs  yMMh   /.         
+    .--        +dMMMNy-   NMM/  `MMm   dMM. -MMN` sMMs  `NMM: oMMMdo:`          
+   +MMd       sMMs-:NMM:  hMMo   mMM` -MMm   +o/. yMMs   sMMy  /hMMMMMmo`       
+   -MMM       NMM.  /MMm  oMMh   yMM: -MMN        oMMh   /MMm     -ohMMMm`      
+    MMM-      MMM.   NMM: :MMN   +MMo `MMM-       -MMN`  -MMm  `/+   -MMM:      
+    dMM+      mMM/   hMM+ `MMM.  -MMh  yMMs   dMM` yMMo  /MMs `hMMmo/yMMd       
+    sMMy      sMMy   yMM+  dMM+  `MMd  `mMM+.:MMh  `hMMddMMd`   :ymNNmy/        
+    /MMm      `NMM-  dMM.  -NMNsohMM/   `yNMMMNs`    -oss+-                     
+    .MMM/++os/ .mMMdNMN+    `ohmdhs-       ...  
+     NMMNmmdh/   :+o+:`  
+'
+
+sh +m
